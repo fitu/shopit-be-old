@@ -6,7 +6,7 @@ const {
     logout,
     forgotPassword,
     resetPassword,
-    getuserProfile,
+    getUserProfile,
     updatePassword,
     updateProfile,
     allUsers,
@@ -20,7 +20,7 @@ const router = express.Router();
 router.route('/login').post(loginUser);
 router.route('/logout').get(logout);
 router.route('/register').post(registerUser);
-router.route('/me').get(isAuthenticatedUser, getuserProfile);
+router.route('/me').get(isAuthenticatedUser, getUserProfile);
 router.route('/me/update').put(isAuthenticatedUser, updateProfile);
 router.route('/password/forgot').post(forgotPassword);
 router.route('/password/update').put(isAuthenticatedUser, updatePassword);
