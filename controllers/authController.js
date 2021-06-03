@@ -177,12 +177,11 @@ exports.updateProfile = catchAsyncErrors(async (req, res, next) => {
 
 exports.allUsers = catchAsyncErrors(async (req, res, next) => {
     const users = await User.find();
-    const userCount = await User.countDocuments();
+    const count = await User.countDocuments();
 
     res.status(200).json({
         success: true,
-        count: users.length,
-        userCount,
+        count,
         users,
     });
 });
