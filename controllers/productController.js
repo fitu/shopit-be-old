@@ -28,6 +28,7 @@ exports.createProduct = catchAsyncErrors(async (req, res, next) => {
     req.body.images = imagesLinks;
     req.body.user = req.user.id;
     const product = await Product.create(req.body);
+
     res.status(201).json({
         success: true,
         product,
@@ -44,7 +45,6 @@ exports.getProducts = async (req, res, next) => {
     res.status(200).json({
         success: true,
         productCount,
-        resultsPerPage,
         products,
     });
 };
@@ -113,7 +113,7 @@ exports.updateProduct = catchAsyncErrors(async (req, res, next) => {
 
     res.status(200).json({
         success: true,
-        updatedProduct,
+        product: updatedProduct,
     });
 });
 
