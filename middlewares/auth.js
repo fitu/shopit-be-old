@@ -1,5 +1,5 @@
-const ErrorHandler = require("../utils/errorHandler");
-const catchAsyncErrors = require("./catchAsyncErrors");
+const { ErrorHandler } = require('../utils/errorHandler');
+const catchAsyncErrors = require('./catchAsyncErrors');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 
@@ -24,5 +24,5 @@ exports.authorizeRoles = (...roles) => {
             return next(new ErrorHandler(`Role (${req.user.role}) is not allowed to access this resource`, 403));
         }
         next();
-    }
+    };
 };
