@@ -1,32 +1,37 @@
 {
-  "name": "shopit",
-  "version": "1.0.0",
-  "description": "Full ecommerce site using mern",
-  "main": "server.js",
-  "scripts": {
-    "start": "SET node server.js",
-    "dev": "SET NODE_ENV=DEVELOPMENT& nodemon server.js",
-    "prod": "SET NODE_ENV=PRODUCTION& nodemon server.js",
-    "seeder": "node utils/seeder.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
-  },
-  "author": "Victorio Matteucci",
-  "license": "ISC",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
-    "cloudinary": "^1.25.1",
-    "cookie-parser": "^1.4.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-fileupload": "^1.2.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.12.1",
-    "nodemailer": "^6.5.0",
-    "stripe": "^8.142.0",
-    "validator": "^13.5.2"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.6"
-  }
+    "name": "shopit",
+    "version": "1.0.0",
+    "description": "Full ecommerce site using mern",
+    "main": "server.js",
+    "scripts": {
+        "start": "SET node server.js",
+        "dev": "SET NODE_ENV=DEVELOPMENT& nodemon server.js",
+        "prod": "SET NODE_ENV=PRODUCTION& nodemon server.js",
+        "lint": "eslint '*/**/*.{js,ts,jsx,tsx}'",
+        "lint:fix": "eslint . --ext js,jsx --fix",
+        "seeder": "node utils/seeder.js",
+        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
+    },
+    "author": "Victorio Matteucci",
+    "license": "ISC",
+    "dependencies": {
+        "@typescript-eslint/parser": "^4.26.1",
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.19.0",
+        "cloudinary": "^1.25.1",
+        "cookie-parser": "^1.4.5",
+        "dotenv": "^8.2.0",
+        "eslint": "^7.28.0",
+        "express": "^4.17.1",
+        "express-fileupload": "^1.2.1",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^5.12.1",
+        "nodemailer": "^6.5.0",
+        "stripe": "^8.142.0",
+        "typescript": "^4.3.2",
+        "validator": "^13.5.2"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.6"
+    }
 }
