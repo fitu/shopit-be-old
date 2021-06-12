@@ -6,6 +6,10 @@ coverage
 
 # misc
 config/config.env
+*.env
+
+# mongo:
+data/
 
 npm-debug.log*
 yarn-debug.log*

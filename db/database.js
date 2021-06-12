@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const connectDatabase = (uri) => {
+const connectDatabase = (uri) =>
     mongoose
         .connect(uri, {
             useNewUrlParser: true,
@@ -10,6 +10,5 @@ const connectDatabase = (uri) => {
         .then((con) => {
             console.log(`DB started in: ${con.connection.host}`);
         });
-};
 
 module.exports = connectDatabase;
