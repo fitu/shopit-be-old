@@ -1,0 +1,12 @@
+[
+    {
+        "name": "foo",
+        "email": "foo@shopit.com",
+        "password": "computadorar",
+        "role": "user",
+        "avatar": {
+            "public_id": "baz",
+            "url": "qux"
+        }
+    }
+]

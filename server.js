@@ -2,16 +2,16 @@
 // TODO: use another file for production, not env vars
 if (process.env.NODE_ENV !== 'PRODUCTION') {
     const dotenv = require('dotenv');
-    dotenv.config({ path: './config/config.env' });
+    dotenv.config();
 }
 
 // Connecting to DB
 const connectDatabase = require('./db/database');
-if (process.env.NODE_ENV !== 'PRODUCTION') {
-    connectDatabase(process.env.DB_LOCAL_URL);
-} else {
+if (process.env.NODE_ENV === 'PRODUCTION') {
     connectDatabase(process.env.DB_URI);
-} 
+} else {
+    connectDatabase(process.env.DB_LOCAL_URL);
+}
 
 // Setting up cloudinary
 const setUpCloudinary = require('./services/cloudinary');
