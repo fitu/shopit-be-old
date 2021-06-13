@@ -11,7 +11,7 @@ dotenv.config();
 
 const seedProducts = async () => {
     try {
-        await connectDatabase(process.env.DB_LOCAL_URL);
+        await connectDatabase(process.env.ORDERS_DB_LOCAL_URL);
 
         await User.deleteMany();
         console.log('Users deleted');

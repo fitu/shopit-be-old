@@ -6,8 +6,14 @@ populatedb:
 envs:
 	docker-compose run shopit env
 
-bash:
+app-shell:
 	docker-compose run shopit bash
+
+ordersdb-shell:
+	docker-compose run ordersDB bash
+
+usersdb-shell:
+	docker-compose run usersDB bash
 
 # Utils
 logs:
