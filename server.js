@@ -8,9 +8,9 @@ if (process.env.NODE_ENV !== 'PRODUCTION') {
 // Connecting to DB
 const connectDatabase = require('./db/database');
 if (process.env.NODE_ENV === 'PRODUCTION') {
-    connectDatabase(process.env.DB_URI);
+    connectDatabase(process.env.ORDERS_DB_URI);
 } else {
-    connectDatabase(process.env.DB_LOCAL_URL);
+    connectDatabase(process.env.ORDERS_DB_LOCAL_URL);
 }
 
 // Setting up cloudinary

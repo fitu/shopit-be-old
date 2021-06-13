@@ -8,7 +8,7 @@ coverage
 config/config.env
 *.env
 
-# mongo:
+# DBs:
 data/
 
 npm-debug.log*
