@@ -1,12 +1,32 @@
 [
     {
-        "name": "foo",
-        "email": "foo@shopit.com",
+        "name": "Mariano Retonli",
+        "email": "mariano.retonli@gmail.com",
         "password": "computadorar",
         "role": "user",
         "avatar": {
-            "public_id": "baz",
-            "url": "qux"
+            "public_id": "ch7mzvadddwq6h1y648t",
+            "url": "https://res.cloudinary.com/fitulp/image/upload/v1623113471/avatars/ch7mzvadddwq6h1y648t.jpg"
+        }
+    },
+    {
+        "name": "Carlos Emiliano Giles",
+        "email": "carlos.emiliano.giles@gmail.com",
+        "password": "computadorar",
+        "role": "user",
+        "avatar": {
+            "public_id": "ch7mzvadddwq6h1y648t",
+            "url": "https://res.cloudinary.com/fitulp/image/upload/v1623113471/avatars/ch7mzvadddwq6h1y648t.jpg"
+        }
+    },
+    {
+        "name": "Lionel Messi",
+        "email": "lionel.messi@gmail.com",
+        "password": "computadorar",
+        "role": "admin",
+        "avatar": {
+            "public_id": "ch7mzvadddwq6h1y648t",
+            "url": "https://res.cloudinary.com/fitulp/image/upload/v1623113471/avatars/ch7mzvadddwq6h1y648t.jpg"
         }
     }
 ]

@@ -2,6 +2,7 @@ const dotenv = require('dotenv');
 
 const User = require('../models/user');
 const Product = require('../models/product');
+const { getRandomNumberInRange } = require('./numberUtils');
 const mockUsers = require('../mock/users');
 const mockProducts = require('../mock/products');
 const connectDatabase = require('../db/database');
@@ -17,9 +18,14 @@ const seedProducts = async () => {
         await Product.deleteMany();
         console.log('Products deleted');
 
-        const user = await User.create(mockUsers[0]);
+        const users = await User.insertMany(mockUsers);
         console.log('Users added');
-        await Product.insertMany(mockProducts.map((product) => ({ ...product, user: user._id })));
+        await Product.insertMany(
+            mockProducts.map((product) => {
+                const randomUser = users[getRandomNumberInRange(users.length)];
+                return { ...product, user: randomUser._id };
+            }),
+        );
         console.log('Products added');
     } catch (error) {
         console.log(error);
