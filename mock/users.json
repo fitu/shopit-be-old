@@ -2,7 +2,7 @@
     {
         "name": "Mariano Retonli",
         "email": "mariano.retonli@gmail.com",
-        "password": "computadorar",
+        "password": "$2a$10$sFa2PXCB1.vte.Gt4yl70OGDZNgItTJAcpW3ssmNs.medcjs/SQr.",
         "role": "user",
         "avatar": {
             "public_id": "ch7mzvadddwq6h1y648t",
@@ -12,7 +12,7 @@
     {
         "name": "Carlos Emiliano Giles",
         "email": "carlos.emiliano.giles@gmail.com",
-        "password": "computadorar",
+        "password": "$2a$10$sFa2PXCB1.vte.Gt4yl70OGDZNgItTJAcpW3ssmNs.medcjs/SQr.",
         "role": "user",
         "avatar": {
             "public_id": "ch7mzvadddwq6h1y648t",
@@ -22,7 +22,7 @@
     {
         "name": "Lionel Messi",
         "email": "lionel.messi@gmail.com",
-        "password": "computadorar",
+        "password": "$2a$10$sFa2PXCB1.vte.Gt4yl70OGDZNgItTJAcpW3ssmNs.medcjs/SQr.",
         "role": "admin",
         "avatar": {
             "public_id": "ch7mzvadddwq6h1y648t",
