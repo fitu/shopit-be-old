@@ -5,12 +5,15 @@ if (process.env.NODE_ENV !== 'PRODUCTION') {
     dotenv.config();
 }
 
-// Connecting to DB
-const connectDatabase = require('./db/database');
+// Connecting to DBs
+const { connectOrdersDatabase } = require('./db/database');
+const { connectUsersDatabase } = require('./db/database');
 if (process.env.NODE_ENV === 'PRODUCTION') {
-    connectDatabase(process.env.ORDERS_DB_URI);
+    connectOrdersDatabase(process.env.ORDERS_DB_URI);
+    connectUsersDatabase(process.env.USERS_DB_URI);
 } else {
-    connectDatabase(process.env.ORDERS_DB_LOCAL_URL);
+    connectOrdersDatabase(process.env.ORDERS_DB_LOCAL_URL);
+    connectUsersDatabase(process.env.USERS_DB_LOCAL_URL);
 }
 
 // Setting up cloudinary

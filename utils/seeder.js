@@ -5,13 +5,13 @@ const Product = require('../models/product');
 const { getRandomNumberInRange } = require('./numberUtils');
 const mockUsers = require('../mock/users');
 const mockProducts = require('../mock/products');
-const connectDatabase = require('../db/database');
+const { connectOrdersDatabase } = require('../db/database');
 
 dotenv.config();
 
 const seedProducts = async () => {
     try {
-        await connectDatabase(process.env.ORDERS_DB_LOCAL_URL);
+        await connectOrdersDatabase(process.env.ORDERS_DB_LOCAL_URL);
 
         await User.deleteMany();
         console.log('Users deleted');
