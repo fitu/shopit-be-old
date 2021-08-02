@@ -2,13 +2,13 @@
 // TODO: use another file for production, not env vars
 if (process.env.NODE_ENV !== 'PRODUCTION') {
     const dotenv = require('dotenv');
-    dotenv.config({ path: './config/config.env' });
+    dotenv.config({ path: './.env' });
 }
 
 // Connecting to DB
 const connectDatabase = require('./db/database');
 if (process.env.NODE_ENV !== 'PRODUCTION') {
-    connectDatabase(process.env.DB_LOCAL_URL);
+    connectDatabase(process.env.ORDERS_DB_URI);
 } else {
     connectDatabase(process.env.DB_URI);
 } 

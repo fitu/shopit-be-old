@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 const connectDatabase = require('../config/database');
 const mockProducts = require('./products');
 
-dotenv.config({ path: 'backend/config/config.env' });
+dotenv.config({ path: 'backend/.env' });
 
 connectDatabase();
 
